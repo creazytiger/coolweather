@@ -55,14 +55,13 @@ public class Utility {
         return false;
     }
 
-}
+
 
     public static boolean handleCountyResponse(String response, int cityId) {
         if (!TextUtils.isEmpty(response)) {
             try {
                 JSONArray allCounties = new JSONArray();
-                for (int i = 0, i<allCounties.length();
-                i++){
+                for (int i = 0; i<allCounties.length();i++){
                     JSONObject countyObject = allCounties.getJSONObject(i);
                     County county = new County();
                     county.setcountyName(countyObject.getString("name"));
